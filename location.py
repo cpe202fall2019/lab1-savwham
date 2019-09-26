@@ -12,6 +12,8 @@ class Location:
         return "Location('{0}', {1}, {2})".format(self.name, self.lat, self.lon)
 
     def __eq__(self, other):
+        if other == None:
+            return False
         return self.name == other.name and self.lat == other.lat and self.lon == other.lon
 
 def main():
