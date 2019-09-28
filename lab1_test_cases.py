@@ -44,6 +44,12 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(max_list_iter(tlist), 4)
 
 #tests for reverse_rec
+    def test_max_list_iter_noneParameter(self):
+        """when none is passed in, raises ValueError"""
+        tlist = None
+        with self.assertRaises(ValueError):  # used to check for exception
+            max_list_iter(tlist)
+
     def test_reverse_rec_random(self):
         """when list random, return rev"""
         self.assertEqual(reverse_rec([1,2,3]),[3,2,1])
